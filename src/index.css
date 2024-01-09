@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden !important;
+}
+
+.hero-bg {
+    background: url(./assets/img/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.css-1nmdi15-menu {
+    z-index: 99;
+}
+
+.homegrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.homegrid img:first-child {
+    grid-area: 1 / 1 / 5 / 2;
+}
+
+.homegrid img:nth-child(2) {
+    grid-area: 5 / 1 / 9 / 3;
+}
+
+.homegrid img:nth-child(3) {
+    grid-area: 2 / 2 / 5 / 6;
+}
+
+.homegrid img:nth-child(4) {
+    grid-area: 1 / 11 / 6 / 13;
+}
+
+.homegrid img:nth-child(5) {
+    grid-area: 3 / 6 / 7 / 8;
+}
+
+.homegrid img:nth-child(6) {
+    grid-area: 5 / 3 / 8 / 6;
+}
+
+.homegrid img:nth-child(7) {
+    grid-area: 2 / 8 / 6 / 11;
+}
+
+.homegrid img:nth-child(8) {
+    grid-area: 6 / 8 / 9 / 10;
+}
+
+.homegrid img:nth-child(9) {
+    grid-area: 6 / 10 / 8 / 12;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
