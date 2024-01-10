@@ -18,7 +18,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productReviews, product
                 rate: 5,
                 text: reviewText
             })
-                .then((response) => {
+                .then(() => {
                     setReviewText('')
                     requestReviews()
                 })

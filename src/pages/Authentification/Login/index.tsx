@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Login: React.FC<LoginProps> = ({ setIsLogin }) => {
 
     const [showPassword, setShowPassword] = useState<boolean>(false)
-    const [userId, setUserId] = useState<string>(localStorage.getItem('userId') || '')
+    const [_userId, setUserId] = useState<string>(localStorage.getItem('userId') || '')
     const [loginError, setLoginError] = useState('')
 
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ const Login: React.FC<LoginProps> = ({ setIsLogin }) => {
             password: '',
         },
         validationSchema: validateSchema,
-        onSubmit: (e) => {
+        onSubmit: (_e) => {
             axios.post('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/Login', values)
                 .then(function (response) {
                     localStorage.setItem('userId', JSON.stringify(response.data.userId));

@@ -13,7 +13,7 @@ const Review: React.FC<ReviewProps> = ({ review, isAuthor, requestReviews }) => 
                     appUserId: review.appUserId
                 }
             })
-            .then(function (response) {
+            .then(() => {
                 requestReviews()
             })
     }

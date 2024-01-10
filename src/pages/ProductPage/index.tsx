@@ -20,13 +20,13 @@ const ProductPage: React.FC = () => {
     const { productFeatures, setProductFeatures } = useData()
 
     const { productId } = useParams<{ productId: string }>()
-    const [loading, data, error, request] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/getById/ProductPage?Id=${productId}` }, false, [`/products/${productId}`]);
-    const [loadingRelated, dataRelated, errorRelated, requestRelated] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/RelatedProducts?ShowMore.Take=20&MainProductId=${productId}` }, false, [`/products/${productId}`]);
-    const [loadingDescription, dataDescription, errorDescription, requestDescription] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/getById/Description?Id=${productId}` }, false, [`/products/${productId}`]);
+    const [_loading, data, _error, _request] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/getById/ProductPage?Id=${productId}` }, false, [`/products/${productId}`]);
+    const [loadingRelated, dataRelated, _errorRelated, _requestRelated] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/RelatedProducts?ShowMore.Take=20&MainProductId=${productId}` }, false, [`/products/${productId}`]);
+    const [loadingDescription, dataDescription, _errorDescription, _requestDescription] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/getById/Description?Id=${productId}` }, false, [`/products/${productId}`]);
 
     const [showReviewCount, setShowReviewCount] = useState(8)
 
-    const [loadingReviews, dataReviews, errorReviews, requestReviews] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Review/ProductReviews?ProductId=${productId}&ShowMore.Take=${showReviewCount}` }, false, [`/products/${productId}`]);
+    const [_loadingReviews, dataReviews, _errorReviews, requestReviews] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Review/ProductReviews?ProductId=${productId}&ShowMore.Take=${showReviewCount}` }, false, [`/products/${productId}`]);
     useEffect(() => {
         setProductDetails(data)
     }, [data])

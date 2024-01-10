@@ -16,7 +16,7 @@ const CheckoutPage: React.FC = () => {
         setSelectedPayment(paymentMethod);
     };
 
-    const { cartItems, userId } = useData()
+    const { userId } = useData()
     //old checkout end
 
     // * * *
@@ -34,7 +34,6 @@ const CheckoutPage: React.FC = () => {
 
     const {
         dataCountry,
-        selectedCountry,
         setSelectedCountry,
         dataProvince,
         requestProvince,
@@ -96,7 +95,7 @@ const CheckoutPage: React.FC = () => {
         onSubmit: () => {
             if (userId) {
                 axios.post('http://immutable858-001-site1.atempurl.com/api/Checkout', values)
-                    .then(function (response) {
+                    .then(() => {
                         clearCart()
                         resetForm()
                     })

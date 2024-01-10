@@ -15,7 +15,7 @@ import { useAxios } from '@/hooks/useAxios'
 
 const ContactPage: React.FC = () => {
 
-    const [userJwtToken, setEserJwtToken] = useState((localStorage.getItem('userJwtToken')) || '')
+    const [userJwtToken, _setEserJwtToken] = useState((localStorage.getItem('userJwtToken')) || '')
 
     const { userId } = useData()
 
@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
             .max(256, "Message must be less than 256 symbols"),
     });
 
-    const [loading, data, error, request] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Contact` }, false, ['/contact']);
+    const [loading, data, error, _request] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Contact` }, false, ['/contact']);
 
     const { handleChange, errors, values, handleSubmit, resetForm, handleBlur } = useFormik({
         initialValues: {

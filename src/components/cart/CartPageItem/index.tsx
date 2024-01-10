@@ -23,9 +23,9 @@ const CartPageItem: React.FC<CartPageItemProps> = ({ cartItem }) => {
 
     const removeFromCart = () => {
         axios.delete('http://immutable858-001-site1.atempurl.com/api/Cart/remove', { data: productToRemove })
-            .then(function (response) {
+            .then(
                 requestCart()
-            })
+            )
 
     }
 

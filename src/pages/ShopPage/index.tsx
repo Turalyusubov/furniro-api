@@ -11,7 +11,7 @@ import { useShopContext } from "@/context/ShopContext";
 
 const ShopPage: React.FC = () => {
 
-    const { shopProductsApi, loading, error, request, productsToShow, pageToShow, setPageToShow, shopPages } = useShopContext()
+    const { shopProductsApi, error, request, productsToShow, pageToShow, setPageToShow, shopPages } = useShopContext()
 
     const [productType, setProductType] = useState('grid')
 

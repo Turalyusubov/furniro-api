@@ -40,7 +40,7 @@ const UpdateUser: React.FC<UpdateUserProps> = ({ userId, userLogin, navigate, se
                 values,
 
             )
-                .then(function (response) {
+                .then(() => {
                     navigate(0)
                     setResponseError('')
                 })

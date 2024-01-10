@@ -27,9 +27,14 @@ export const CheckoutContextProvider = ({ children }: { children: any }) => {
 
     const states = {
         dataCountry,
+        loadingCountry,
+        errorCountry,
+        requestCountry,
         selectedCountry,
         setSelectedCountry,
         dataProvince,
+        loadingProvince,
+        errorProvince,
         requestProvince,
         selectedProvince,
         setSelectedProvince

@@ -66,6 +66,14 @@ export const ShopContextProvider = ({ children }: { children: any }) => {
     }, [data])
 
     const states = {
+        errorCategories,
+        errorColors,
+        requestColors,
+        requestCategories,
+        errorTags,
+        requestTags,
+        requestSizes,
+        errorSizes,
         shopProductsApi,
         setShopProductsApi,
         maxPrice,

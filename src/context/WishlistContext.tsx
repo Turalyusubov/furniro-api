@@ -73,7 +73,7 @@ export const WishlistContextProvider = ({ children }: { children: any }) => {
                     }
                 }
             )
-                .then(function (response) {
+                .then(() => {
                     toast.success('Product is removed from wishlist successfully!', {
                         position: "top-right",
                         autoClose: 5000,

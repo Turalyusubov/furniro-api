@@ -37,7 +37,7 @@ const ChangePassword: React.FC<ChangePasswordProps> = ({ userId, navigate, setTa
             axios.put('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/ChangePassword',
                 values,
             )
-                .then(function (response) {
+                .then(() => {
                     navigate(0)
                     setResponseError('')
                     resetForm()

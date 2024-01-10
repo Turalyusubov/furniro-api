@@ -10,7 +10,7 @@ const DeleteAccount: React.FC<DeleteAccountProps> = ({ setTabs, userName, naviga
         axios.put('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/DeleteUser',
             { userName },
         )
-            .then(function (response) {
+            .then(() => {
                 navigate('/')
                 navigate(0)
                 localStorage.removeItem('userLogin')
