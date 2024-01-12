@@ -59,7 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product }) => {
         event.preventDefault()
         event.stopPropagation()
         const shareLink = window.location.href;
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareLink)}`, 'facebook-share-dialog', 'width=626,height=436');
+        window.open(`http://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareLink)}`, 'facebook-share-dialog', 'width=626,height=436');
     };
 
     const handleAddToWishlist = (event: React.MouseEvent<HTMLButtonElement>) => {
