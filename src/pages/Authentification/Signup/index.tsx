@@ -48,7 +48,7 @@ const Signup: React.FC<SignupProps> = ({ setIsLogin }) => {
         validationSchema: validateSchema,
         onSubmit: () => {
             console.log(values)
-            axios.post('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/CreateUser', values)
+            axios.post('https://immutable858-001-site1.atempurl.com/api/ApplicationUser/CreateUser', values)
                 .then(function (response) {
                     console.log('response', response);
                     setIsLogin(true)

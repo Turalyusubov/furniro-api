@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const SearchPage: React.FC = () => {
   const [searchPrompt, setSearchPrompt] = useState('')
-  const [_loading, data, _error, request] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/Products?Prompt=${searchPrompt}` }, false, ['/search']);
+  const [_loading, data, _error, request] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/UserProduct/Products?Prompt=${searchPrompt}` }, false, ['/search']);
 
   useEffect(() => {
     request()

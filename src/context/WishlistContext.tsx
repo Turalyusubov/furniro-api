@@ -22,7 +22,7 @@ export const WishlistContextProvider = ({ children }: { children: any }) => {
     const [wishlistItems, setWishlistItems] = useState([])
 
     const [loadingWishlist, dataWishlist, errorWishlist, requestWishlist] = useAxios<any>({
-        method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Favorite?UserId=${userId}`,
+        method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Favorite?UserId=${userId}`,
         headers: {
             "Accept": "/",
             "Authorization": `Bearer ${userJwtToken}`,
@@ -38,7 +38,7 @@ export const WishlistContextProvider = ({ children }: { children: any }) => {
 
     const addToWishlist = (productId: number) => {
         if (userId) {
-            axios.post('http://immutable858-001-site1.atempurl.com/api/Favorite',
+            axios.post('https://immutable858-001-site1.atempurl.com/api/Favorite',
                 {
                     userId: userId,
                     productId: productId
@@ -59,7 +59,7 @@ export const WishlistContextProvider = ({ children }: { children: any }) => {
 
     const removeFromWishlist = (productId: number) => {
         if (userId) {
-            axios.delete('http://immutable858-001-site1.atempurl.com/api/Favorite',
+            axios.delete('https://immutable858-001-site1.atempurl.com/api/Favorite',
                 {
                     data:
                     {

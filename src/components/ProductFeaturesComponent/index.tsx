@@ -63,7 +63,7 @@ const ProductFeaturesComponent: React.FC<ProductFeaturesComponentProps> = ({ id,
 
     const handleAddToCart = () => {
         if (userId) {
-            axios.post('http://immutable858-001-site1.atempurl.com/api/Cart/addToCart', productForCart)
+            axios.post('https://immutable858-001-site1.atempurl.com/api/Cart/addToCart', productForCart)
                 .then(function (response) {
                     toast.success(response.data.message, {
                         position: "top-right",

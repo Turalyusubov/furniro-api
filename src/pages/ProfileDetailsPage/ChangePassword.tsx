@@ -34,7 +34,7 @@ const ChangePassword: React.FC<ChangePasswordProps> = ({ userId, navigate, setTa
         validationSchema: validateSchema,
         onSubmit: () => {
 
-            axios.put('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/ChangePassword',
+            axios.put('https://immutable858-001-site1.atempurl.com/api/ApplicationUser/ChangePassword',
                 values,
             )
                 .then(() => {

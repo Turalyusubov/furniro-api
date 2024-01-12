@@ -19,11 +19,11 @@ export const BlogContextProvider = ({ children }: { children: any }) => {
     const [blogSearchText, setBlogSearchText] = useState<string>('')
     const [blogSearchCategory, setBlogSearchCategory] = useState<string>('')
 
-    const [loadingBlog, dataBlog, errorBlog, requestBlog] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Blog?Page=${blogPageToShow}&ShowMore.Take=8&Prompt=${blogSearchText}&CategoryId=${blogSearchCategory}` }, false, ['/blog']);
+    const [loadingBlog, dataBlog, errorBlog, requestBlog] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Blog?Page=${blogPageToShow}&ShowMore.Take=8&Prompt=${blogSearchText}&CategoryId=${blogSearchCategory}` }, false, ['/blog']);
 
-    const [loadingCategory, dataCategory, errorCategory, requestCategory] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Blog/blog-categories` }, false, ['/blog']);
+    const [loadingCategory, dataCategory, errorCategory, requestCategory] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Blog/blog-categories` }, false, ['/blog']);
 
-    const [loadingRecent, dataRecent, errorRecent, requestRecent] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Blog/recent-posts` }, false, ['/blog']);
+    const [loadingRecent, dataRecent, errorRecent, requestRecent] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Blog/recent-posts` }, false, ['/blog']);
 
     useEffect(() => {
         if (dataBlog && dataBlog.length > 0) {

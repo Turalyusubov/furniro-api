@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
             .max(256, "Message must be less than 256 symbols"),
     });
 
-    const [loading, data, error, _request] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Contact` }, false, ['/contact']);
+    const [loading, data, error, _request] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Contact` }, false, ['/contact']);
 
     const { handleChange, errors, values, handleSubmit, resetForm, handleBlur } = useFormik({
         initialValues: {
@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
         validationSchema: validateSchema,
         onSubmit: () => {
             if (userId) {
-                axios.post('http://immutable858-001-site1.atempurl.com/api/ContactMessage',
+                axios.post('https://immutable858-001-site1.atempurl.com/api/ContactMessage',
                     values,
                     {
                         headers: {

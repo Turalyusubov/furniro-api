@@ -16,9 +16,9 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     const [ourProductsToShow, setOurProductsToShow] = useState<number>(8)
     const [userId, _setUserId] = useState<string>(localStorage.getItem('userId') || '')
     const [userLogin, setUserLogin] = useState<string>(localStorage.getItem('userLogin') || '');
-    const [loadingOurProducts, dataOurProducts, errorOurProducts, requestOurProducts] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/UserProduct/Products?Page=1&ShowMore.Take=${ourProductsToShow}` }, false, ['/']);
+    const [loadingOurProducts, dataOurProducts, errorOurProducts, requestOurProducts] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/UserProduct/Products?Page=1&ShowMore.Take=${ourProductsToShow}` }, false, ['/']);
 
-    const [_loadingUserLogin, dataUserLogin, _errorUserLogin, _requestUserLogin] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/ApplicationUser/${userId}` });
+    const [_loadingUserLogin, dataUserLogin, _errorUserLogin, _requestUserLogin] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/ApplicationUser/${userId}` });
 
     useEffect(() => {
         requestOurProducts()

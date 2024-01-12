@@ -23,7 +23,7 @@ const CheckoutPage: React.FC = () => {
 
     const clearCart = () => {
         if (userId)
-            axios.post('http://immutable858-001-site1.atempurl.com/api/Cart/ClearCart', { appUserId: userId })
+            axios.post('https://immutable858-001-site1.atempurl.com/api/Cart/ClearCart', { appUserId: userId })
                 .catch(function (error) {
                     setCheckoutError(error.response.data.Message)
                 });
@@ -94,7 +94,7 @@ const CheckoutPage: React.FC = () => {
         validationSchema: validateSchema,
         onSubmit: () => {
             if (userId) {
-                axios.post('http://immutable858-001-site1.atempurl.com/api/Checkout', values)
+                axios.post('https://immutable858-001-site1.atempurl.com/api/Checkout', values)
                     .then(() => {
                         clearCart()
                         resetForm()

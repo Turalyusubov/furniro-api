@@ -19,7 +19,7 @@ const CartModalItem: React.FC<CartModalItemProps> = ({ p }) => {
     }, [p, userId])
 
     const removeFromCart = () => {
-        axios.delete('http://immutable858-001-site1.atempurl.com/api/Cart/remove', { data: productToRemove })
+        axios.delete('https://immutable858-001-site1.atempurl.com/api/Cart/remove', { data: productToRemove })
             .then(
                 requestCart()
             )

@@ -36,7 +36,7 @@ const Login: React.FC<LoginProps> = ({ setIsLogin }) => {
         },
         validationSchema: validateSchema,
         onSubmit: (_e) => {
-            axios.post('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/Login', values)
+            axios.post('https://immutable858-001-site1.atempurl.com/api/ApplicationUser/Login', values)
                 .then(function (response) {
                     localStorage.setItem('userId', JSON.stringify(response.data.userId));
                     localStorage.setItem('userJwtToken', response.data.jwtToken);

@@ -7,7 +7,7 @@ const DeleteAccount: React.FC<DeleteAccountProps> = ({ setTabs, userName, naviga
     const [responseError, setResponseError] = useState<string>('')
 
     const handleDelete = () => {
-        axios.put('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/DeleteUser',
+        axios.put('https://immutable858-001-site1.atempurl.com/api/ApplicationUser/DeleteUser',
             { userName },
         )
             .then(() => {

@@ -5,7 +5,7 @@ import moment from "moment";
 const Review: React.FC<ReviewProps> = ({ review, isAuthor, requestReviews }) => {
 
     const removeReview = () => {
-        axios.delete('http://immutable858-001-site1.atempurl.com/api/Review',
+        axios.delete('https://immutable858-001-site1.atempurl.com/api/Review',
             {
                 data: {
                     id: review.id,

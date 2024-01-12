@@ -42,17 +42,17 @@ export const ShopContextProvider = ({ children }: { children: any }) => {
     };
 
 
-    const testApi = `http://immutable858-001-site1.atempurl.com/api/UserProduct/Products?Page=${pageToShow}&ShowMore.Take=${productsToShow}${categoryNamesToShow?.length > 0 ? transformAndJoin(categoryNamesToShow, 'categories') : ''}${isNewToShow ? `&IsNew=${isNewToShow}` : ''}${productTagsToShow.length > 0 ? transformAndJoin(productTagsToShow, 'tags') : ''}${productSizesToShow.length > 0 ? transformAndJoin(productSizesToShow, 'sizes') : ''}${minPriceToShow !== 0 ? `&MinPrice=${minPriceToShow}` : ''}${maxPriceToShow !== 2000 ? `&MaxPrice=${maxPriceToShow}` : ''}${orderByToShow.length > 0 ? `&OrderBy=${orderByToShow}` : ''}${productColorsToShow.length > 0 ? transformAndJoin(productColorsToShow, 'colors') : ''}`
+    const testApi = `https://immutable858-001-site1.atempurl.com/api/UserProduct/Products?Page=${pageToShow}&ShowMore.Take=${productsToShow}${categoryNamesToShow?.length > 0 ? transformAndJoin(categoryNamesToShow, 'categories') : ''}${isNewToShow ? `&IsNew=${isNewToShow}` : ''}${productTagsToShow.length > 0 ? transformAndJoin(productTagsToShow, 'tags') : ''}${productSizesToShow.length > 0 ? transformAndJoin(productSizesToShow, 'sizes') : ''}${minPriceToShow !== 0 ? `&MinPrice=${minPriceToShow}` : ''}${maxPriceToShow !== 2000 ? `&MaxPrice=${maxPriceToShow}` : ''}${orderByToShow.length > 0 ? `&OrderBy=${orderByToShow}` : ''}${productColorsToShow.length > 0 ? transformAndJoin(productColorsToShow, 'colors') : ''}`
 
     const [loading, data, error, request] = useAxios<any>({ method: 'GET', url: testApi });
 
-    const [loadingSizes, dataSizes, errorSizes, requestSizes] = useAxios<any>({ method: 'GET', url: 'http://immutable858-001-site1.atempurl.com/api/Size/getAll' }, false, ['/shop']);
+    const [loadingSizes, dataSizes, errorSizes, requestSizes] = useAxios<any>({ method: 'GET', url: 'https://immutable858-001-site1.atempurl.com/api/Size/getAll' }, false, ['/shop']);
 
-    const [loadingTags, dataTags, errorTags, requestTags] = useAxios<any>({ method: 'GET', url: 'http://immutable858-001-site1.atempurl.com/api/Tag/getAll' }, false, ['/shop']);
+    const [loadingTags, dataTags, errorTags, requestTags] = useAxios<any>({ method: 'GET', url: 'https://immutable858-001-site1.atempurl.com/api/Tag/getAll' }, false, ['/shop']);
 
-    const [loadingCategories, dataCategories, errorCategories, requestCategories] = useAxios<any>({ method: 'GET', url: 'http://immutable858-001-site1.atempurl.com/api/Category/getAll' }, false, ['/shop']);
+    const [loadingCategories, dataCategories, errorCategories, requestCategories] = useAxios<any>({ method: 'GET', url: 'https://immutable858-001-site1.atempurl.com/api/Category/getAll' }, false, ['/shop']);
 
-    const [loadingColors, dataColors, errorColors, requestColors] = useAxios<any>({ method: 'GET', url: 'http://immutable858-001-site1.atempurl.com/api/Color/getAll' }, false, ['/shop']);
+    const [loadingColors, dataColors, errorColors, requestColors] = useAxios<any>({ method: 'GET', url: 'https://immutable858-001-site1.atempurl.com/api/Color/getAll' }, false, ['/shop']);
 
     useEffect(() => {
         totalProductCount && setShopPages(Math.ceil(totalProductCount / productsToShow))

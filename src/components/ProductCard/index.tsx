@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = memo(({ product }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://immutable858-001-site1.atempurl.com/api/UserProduct/getById/ProductPage?Id=${product.id}`);
+                const response = await fetch(`https://immutable858-001-site1.atempurl.com/api/UserProduct/getById/ProductPage?Id=${product.id}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }

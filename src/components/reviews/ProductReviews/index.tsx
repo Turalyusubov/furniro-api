@@ -12,7 +12,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productReviews, product
     const postReview = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         if (productId && userId)
-            axios.post("http://immutable858-001-site1.atempurl.com/api/Review", {
+            axios.post("https://immutable858-001-site1.atempurl.com/api/Review", {
                 productId: productId,
                 appUserId: userId,
                 rate: 5,

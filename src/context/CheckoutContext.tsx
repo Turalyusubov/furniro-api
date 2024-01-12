@@ -12,8 +12,8 @@ export const CheckoutContextProvider = ({ children }: { children: any }) => {
     const [selectedCountry, setSelectedCountry] = useState<number>()
     const [selectedProvince, setSelectedProvince] = useState<number>()
 
-    const [loadingCountry, dataCountry, errorCountry, requestCountry] = useAxios<any>({ method: 'GET', url: 'http://immutable858-001-site1.atempurl.com/api/Country' }, false, ['/checkout']);
-    const [loadingProvince, dataProvince, errorProvince, requestProvince] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Province/GetRelatedProvince/${selectedCountry}` }, false, ['/checkout']);
+    const [loadingCountry, dataCountry, errorCountry, requestCountry] = useAxios<any>({ method: 'GET', url: 'https://immutable858-001-site1.atempurl.com/api/Country' }, false, ['/checkout']);
+    const [loadingProvince, dataProvince, errorProvince, requestProvince] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Province/GetRelatedProvince/${selectedCountry}` }, false, ['/checkout']);
 
     useEffect(() => {
         if (dataCountry)

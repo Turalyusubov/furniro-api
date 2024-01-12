@@ -30,6 +30,9 @@ const ShopPage: React.FC = () => {
         [shopProductsApi]
     )
 
+    console.log('productsToShow');
+
+
     if (!shopProductsApi) return <p>Data was null</p>;
 
     if (error) return <p>{error}</p>;

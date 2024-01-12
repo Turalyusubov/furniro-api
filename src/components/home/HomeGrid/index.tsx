@@ -10,7 +10,7 @@ const HomeGrid: React.FC = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch('http://immutable858-001-site1.atempurl.com/api/Home');
+                const response = await fetch('https://immutable858-001-site1.atempurl.com/api/Home');
                 const result = await response.json();
                 setData(result);
                 setLoading(false);

@@ -36,7 +36,7 @@ const UpdateUser: React.FC<UpdateUserProps> = ({ userId, userLogin, navigate, se
         },
         validationSchema: validateSchema,
         onSubmit: () => {
-            axios.put('http://immutable858-001-site1.atempurl.com/api/ApplicationUser/UpdateUser',
+            axios.put('https://immutable858-001-site1.atempurl.com/api/ApplicationUser/UpdateUser',
                 values,
 
             )

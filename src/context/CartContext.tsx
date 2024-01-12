@@ -17,7 +17,7 @@ export const CartContextProvider = ({ children }: { children: any }) => {
     const [isCartOpen, setIsCartOpen] = useState<boolean>(false)
     const [cartTotalPrice, setCartTotalPrice] = useState<number>()
 
-    const [loadingCart, dataCart, errorCart, requestCart] = useAxios<any>({ method: 'GET', url: `http://immutable858-001-site1.atempurl.com/api/Cart/getAllCartItems/${userId}` });
+    const [loadingCart, dataCart, errorCart, requestCart] = useAxios<any>({ method: 'GET', url: `https://immutable858-001-site1.atempurl.com/api/Cart/getAllCartItems/${userId}` });
 
     useEffect(() => {
         if (isCartOpen) {
